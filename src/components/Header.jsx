@@ -13,7 +13,7 @@ const Header = ({ showAddToggle }) => {
   );
 };
 
-Header.PropTypes = {
+Header.propTypes = {
   showAddToggle: PropTypes.func.isRequired
 };
 export default Header;
