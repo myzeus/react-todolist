@@ -35,7 +35,7 @@ const TodoList = () => {
   //CLEAR TODOS
   const clearTodos = () => setTodos([]);
 
-  console.log("todos", todos);
+  // console.log("todos", todos);
   return (
     <Paper>
       <Header
