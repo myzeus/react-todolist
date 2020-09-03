@@ -33,7 +33,7 @@ const TodoList = () => {
   const showAddToggle = () => setShowAdd(!showAdd);
 
   //CLEAR TODOS
-  const clearTodos = () => setTodos([]);
+  const clearTodos = () => !showAdd && setTodos([]);
 
   // console.log("todos", todos);
   return (

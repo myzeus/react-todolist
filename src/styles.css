@@ -21,6 +21,14 @@ font-family: 'Roboto', sans-serif;
   color: var(--main-black-color);
 }
 
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -68,15 +76,17 @@ body {
 }
 
 .header-title {
-  flex: 1;
+  /* flex: 1; */
+  width: 52%;
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-size: 3.6rem;
   color: var(--main-black-color);
-  /* text-transform: lowercase; */
+  text-transform: lowercase;
 }
 
 .header-btn {
+  width: 24%;
   font-size: 1.8rem;
   font-family: "Roboto", sans-serif;
   padding: 16px;
