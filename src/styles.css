@@ -13,22 +13,6 @@ font-family: 'Roboto', sans-serif;
   --main-black-color: #484848;
 }
 
-.main-red-color {
-  color: var(--main-red-color);
-}
-
-.main-black-color {
-  color: var(--main-black-color);
-}
-
-.align-left {
-  text-align: left;
-}
-
-.align-right {
-  text-align: right;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -83,26 +67,6 @@ body {
   font-size: 3.6rem;
   color: var(--main-black-color);
   text-transform: lowercase;
-}
-
-.header-btn {
-  width: 24%;
-  font-size: 1.8rem;
-  font-family: "Roboto", sans-serif;
-  padding: 16px;
-  background: unset;
-  border: unset;
-  outline: unset;
-  font-weight: 800;
-  cursor: pointer;
-}
-
-.header-btn.main-red-color:active {
-  text-shadow: 1px 1px 2px var(--main-red-color);
-}
-
-.header-btn.main-black-color:active {
-  text-shadow: 1px 1px 2px var(--main-black-color);
 }
 
 .add-btn.main-black-color:active {
