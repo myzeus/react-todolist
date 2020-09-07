@@ -1,0 +1,26 @@
+import { css } from "@emotion/core";
+
+export const todos = () =>
+  css`
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+  `;
+
+export const todoPlaceholderText = () =>
+  css`
+    font-family: "Roboto", sans-serif;
+    color: #484848;
+    font-weight: initial;
+    font-size: 22px;
+    text-align: center;
+    padding: 16px;
+  `;
+
+export const addButtonPlaceholderText = () =>
+  css`
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 22px;
+  `;
