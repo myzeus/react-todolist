@@ -8,7 +8,6 @@ export const header = () =>
 
 export const headerTitle = (theme) =>
   css`
-    width: 52%;
     text-align: center;
     font-family: "Montserrat", sans-serif;
     font-size: 3.6rem;
