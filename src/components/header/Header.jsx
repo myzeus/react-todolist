@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import PropTypes from "prop-types";
-import Button from "../button/ButtonNoJSX";
+import Button from "../button/ButtonClass";
 import * as styles from "./header.styles";
 import { useTheme } from "emotion-theming";
 import Container from "../../layout/Container";
