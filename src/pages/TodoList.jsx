@@ -5,6 +5,7 @@ import Paper from "../components/paper/Paper";
 import Header from "../components/header/Header";
 import TodoForm from "../components/todoform/TodoForm";
 import Todos from "../components/todos/Todos";
+import Container from "../layout/Container";
 
 const TodoList = () => {
   const [todos, setTodos] = useState([
@@ -38,13 +39,19 @@ const TodoList = () => {
   // console.log("todos", todos);
   return (
     <Paper>
-      <Header
-        showAddToggle={showAddToggle}
-        clearTodos={clearTodos}
-        showAdd={showAdd}
-      />
-      <TodoForm addTodo={addTodo} showAdd={showAdd} />
-      <Todos todos={todos} completeTodo={completeTodo} />
+      <Container
+        flexDirection="column"
+        justifyContent="space-between"
+        height="100%"
+      >
+        <Header
+          showAddToggle={showAddToggle}
+          clearTodos={clearTodos}
+          showAdd={showAdd}
+        />
+        <TodoForm addTodo={addTodo} showAdd={showAdd} />
+        <Todos todos={todos} completeTodo={completeTodo} />
+      </Container>
     </Paper>
   );
 };

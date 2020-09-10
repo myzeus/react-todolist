@@ -11,9 +11,9 @@ export const paper = ({ theme }) =>
 
 export const frame = ({ theme }) =>
   css`
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
     border: 1px solid ${theme.color.primary.black};
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
   `;
