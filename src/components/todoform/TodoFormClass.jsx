@@ -45,7 +45,7 @@ class TodoForm extends React.Component {
 
     addTodo(value);
     this.setState({
-      value: ""
+      value: " "
     });
   };
 
@@ -56,7 +56,7 @@ class TodoForm extends React.Component {
   };
 
   render() {
-    const { showAdd, theme } = this.props;
+    const { addTodo, showAdd, theme } = this.props;
 
     if (showAdd) {
       return (
