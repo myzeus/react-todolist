@@ -2,7 +2,7 @@ import { ThemeProvider } from "emotion-theming";
 import React from "react";
 import "./styles.css";
 
-import TodoList from "./pages/TodoListClass";
+import TodoList from "./pages/TodoList";
 
 const theme = {
   color: {
@@ -25,3 +25,6 @@ export default function App() {
     </ThemeProvider>
   );
 }
+
+// finish project
+// https://codesandbox.io/s/react-todolist-589m6?file=/src/pages/TodoListClass.jsx
