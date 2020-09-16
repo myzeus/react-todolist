@@ -1,8 +1,7 @@
 import React from "react";
 import Paper from "../components/paper/PaperClass";
 import Container from "../layout/Container";
-import { Link } from "react-router-dom";
-
+import AboutContent from "../components/AboutContent/AboutContent";
 const About = () => {
   return (
     <Paper>
@@ -11,8 +10,7 @@ const About = () => {
         justifyContent="space-between"
         height="100%"
       >
-        <h1>This is About Page</h1>
-        <Link to="/">Pergi ke home</Link>
+        <AboutContent />
       </Container>
     </Paper>
   );

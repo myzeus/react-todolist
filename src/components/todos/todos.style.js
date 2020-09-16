@@ -17,3 +17,9 @@ export const addButtonPlaceholderText = () =>
     text-decoration: underline;
     font-size: 22px;
   `;
+
+export const seeAboutPagePlaceholderText = () =>
+  css`
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+  `;

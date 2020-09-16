@@ -6,8 +6,6 @@ import * as styles from "./header.styles";
 import { useTheme } from "emotion-theming";
 import Container from "../../layout/Container";
 import Item from "../../layout/Item";
-import { Link } from "react-router-dom";
-
 const Header = ({ showAddToggle, showAdd, clearTodos }) => {
   const theme = useTheme();
 
@@ -20,7 +18,6 @@ const Header = ({ showAddToggle, showAdd, clearTodos }) => {
 
         <Item flex={2}>
           <h1 css={styles.headerTitle(theme)}>Todo List</h1>
-          <Link to="/about">Ke halaman about</Link>
         </Item>
 
         <Item flex={1} align="right">
