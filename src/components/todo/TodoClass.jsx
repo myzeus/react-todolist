@@ -1,15 +1,15 @@
 import React from "react";
-import styled from "@emotion/styled";
 import PropTypes from "prop-types";
+import styled from "@emotion/styled";
 import { withTheme } from "emotion-theming";
 
 const StyledTodo = styled.div`
   position: relative;
   flex: 1 0 auto;
   text-align: center;
-  max-height: 34px;
+  max-height: 32px;
   margin: 16px 0 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Homemade Apple", sans-serif;
   font-size: 24px;
   border-bottom: 1px solid ${(props) => props.theme.color.primary.red};
 `;
@@ -19,9 +19,9 @@ const StyledTodoText = styled.span`
   height: 50px;
   position: absolute;
   left: 50%;
+  transform: translate(-50%);
   text-decoration: ${(props) =>
     props.isCompleted ? "line-through" : "initial"};
-  transform: translate(-50%);
   color: ${(props) => props.theme.color.primary.black};
 `;
 

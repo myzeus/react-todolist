@@ -1,5 +1,4 @@
 import React from "react";
-
 import Paper from "../components/paper/PaperClass";
 import Header from "../components/header/HeaderClass";
 import TodoForm from "../components/todoform/TodoFormClass";
@@ -8,53 +7,28 @@ import Container from "../layout/Container";
 
 class TodoList extends React.Component {
   state = {
-    todos: [
-      { text: "Learning  React!", isCompleted: false },
-      { text: "Learning React  Hooks!", isCompleted: false },
-      { text: "Learning styling in react!", isCompleted: false }
-    ],
+    todos: [],
     showAdd: false
   };
 
-  addTdodo = (value) => {
-    const { todos } = this.state;
-    if (todos.length < 10) {
-      const addedTodo = [
-        ...this.state.todos,
-        { text: value, isCompleted: false }
-      ];
-      this.setState({
-        todos: addedTodo
-      });
-    } else {
-      alert("only can added 10 times");
-    }
-  };
+  componentDidMount() {
+    const todosStateLocalStorage =
+      JSON.parse(localStorage.getItem("todos")) || [];
 
-  // addTodo = (value) => {
-  //   const { todos } = this.state;
+    const showAddStateLocalStorage =
+      JSON.parse(localStorage.getItem("showAdd")) || false;
 
-  //   if (todos.length < 10) {
-  //     const addedTodo = [...todos, { text: value, isCompleted: false }];
+    this.setState({
+      todos: todosStateLocalStorage,
+      showAdd: showAddStateLocalStorage
+    });
+  }
 
-  //     this.setState({
-  //       todos: addedTodo
-  //     });
-  //   } else {
-  //     alert("Only 10 todos is allowed!");
-  //   }
-  // };
-
-  // clearTodos = () => {
-  //   if (this.state.showAdd) {
-  //     alert("Clear can be used after add todo has been closed");
-  //     return;
-  //   }
-
-  //   this.state({
-  //     todos: []
-  //   });
-  // };
+  componentDidUpdate() {
+    const { todos, showAdd } = this.state;
+    localStorage.setItem("todos", JSON.stringify(todos));
+    localStorage.setItem("showAdd", JSON.stringify(showAdd));
+  }
 
   addTodo = (value) => {
     const { todos } = this.state;
@@ -80,23 +54,32 @@ class TodoList extends React.Component {
     });
   };
 
+  completeTodo = (index) => {
+    const addedTodo = [...this.state.todos];
+    addedTodo[index].isCompleted = !addedTodo[index].isCompleted;
+
+    this.setState({
+      todos: addedTodo
+    });
+  };
+
   showAddToggle = () => {
     this.setState((prevState) => ({ showAdd: !prevState.showAdd }));
   };
 
   render() {
-    const { showAdd, todos } = this.state;
+    const { todos, showAdd } = this.state;
     return (
       <Paper>
         <Container
           flexDirection="column"
-          justifyContent="space-between"
+          justifyContenct="space-between"
           height="100%"
         >
           <Header
             showAddToggle={this.showAddToggle}
-            clearTodos={this.clearTodos}
             showAdd={showAdd}
+            clearTodos={this.clearTodos}
           />
           <TodoForm addTodo={this.addTodo} showAdd={showAdd} />
           <Todos todos={todos} completeTodo={this.completeTodo} />
